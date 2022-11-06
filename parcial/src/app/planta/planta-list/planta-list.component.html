@@ -1,0 +1,60 @@
+<div class="container">
+  <!--Application main title-->
+  <div class="row">
+    <div class="container text-left">
+      <h2 id="main-title">Vivero las Plantas</h2>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <!--Application main image-->
+    <div class="container">
+      <img src="https://img.freepik.com/psd-gratis/plantilla-banner-cultivo-plantas_23-2149006777.jpg?w=826&t=st=1667749402~exp=1667750002~hmac=02c8a3a678759b401c0b248d1894b8b037ea1abcbc9bb870f36a833bed06064d" class="img-fluid"
+        alt="Banner Plantas main" />
+    </div>
+  </div>
+  <hr>
+  <!--Data table-->
+  <div class="row">
+    <div class="container table-margin">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th class="th-style" cope="row">#</th>
+            <th class="th-style" cope="row">Nombre Común</th>
+            <th class="th-style" cope="row">Tipo</th>
+            <th class="th-style" cope="row">Clima</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let planta of plantas, let idxPlanta = index">
+            <th id="row" scope="row">{{ idxPlanta + 1 }}</th>
+            <td id="planta-nombre-comun">{{ planta.nombre_comun }}</td>
+            <td id="planta-tipo">{{ planta.tipo }}</td>
+            <td id="planta-clima">{{ planta.clima }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+<!--Summary of plants-->
+<div class="row" id="resumen-plantas">
+  <div class="container-fluids">
+    <p>Total plantas de Interior: {{ sumInterior }}</p>
+    <p>Total plantas de Exterior: {{ sumExterior }}</p>
+  </div>
+</div>
+</div>
+
+  <!--footer-->
+  <div class="row">
+    <div class="container" id="application-footer">
+      <footer>
+        <div class="text-center">
+          Contact us: +57 3010000001 - info@plantas.com - @plantas
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
